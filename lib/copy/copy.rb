@@ -7,6 +7,10 @@ class Copy
   end
 
   def call
-
+    if from.is_a? ::Hash
+      Hash.(from, to)
+    else
+      Object.(from, to)
+    end
   end
 end

@@ -11,3 +11,5 @@ require 'pp'
 require 'securerandom'
 
 require 'copy/controls'
+
+Controls = Copy::Controls
