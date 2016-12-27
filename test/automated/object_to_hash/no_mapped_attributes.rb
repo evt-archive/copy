@@ -1,13 +1,13 @@
 require_relative '../automated_init'
 
 context "Object to Hash" do
-  context "No mapped attributes" do
+  context "No Mapped Attributes" do
     hash = {}
     object = Controls::Object.example
 
     Copy.(object, hash)
 
-    context "Attributes are copied" do
+    context "Attributes are Copied" do
       test "some_attribute" do
         assert(hash[:some_attribute] == 'some value')
       end
