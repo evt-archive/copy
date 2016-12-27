@@ -1,7 +1,7 @@
 require_relative '../automated_init'
 
-context "Mapping" do
-  context "Hash to Object" do
+context "Hash to Object" do
+  context "Mapped Attributes" do
     hash = Controls::Hash.example
     object = Controls::Object::New.example
 
