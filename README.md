@@ -1,6 +1,6 @@
 # copy
 
-Copy between objects and hashes, optionally mapping attribute names in either direction
+Copy between structs and hashes, optionally mapping attribute names in either direction
 
 ## License
 

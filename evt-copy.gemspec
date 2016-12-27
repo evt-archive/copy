@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.name = 'evt-copy'
   s.version = '0.0.0.0'
-  s.summary = 'Copy between objects and hashes, optionally mapping attribute names in either direction'
+  s.summary = 'Copy between structs and hashes, optionally mapping attribute names in either direction'
   s.description = ' '
 
   s.authors = ['The Eventide Project']
@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 2.3.3'
 
   s.add_runtime_dependency 'evt-initializer'
+  s.add_runtime_dependency 'evt-set_attributes'
 
   s.add_development_dependency 'test_bench'
 end
