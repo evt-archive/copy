@@ -1,15 +1,15 @@
 class Copy
   module Hash
-    def self.call(hash, object, mappings)
-      map = map(hash, object, mappings)
+    def self.call(hash, object, map)
+      map = map(hash, object, map)
       SetAttributes.(object, hash, copy: map)
     end
 
-    def self.map(hash, object, mappings)
+    def self.map(hash, object, map)
       keys = hash.keys
       map = []
       keys.each do |key|
-        mapping = mappings.find { |m| m.key == key}
+        mapping = map.find { |m| m.key == key}
 
         if mapping.nil?
           map << key

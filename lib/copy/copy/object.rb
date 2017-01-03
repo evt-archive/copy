@@ -1,10 +1,10 @@
 class Copy
   class Object
-    def self.call(object, hash, mappings)
+    def self.call(object, hash, map)
       object_hash = object.to_h
 
       object_hash.each do |key, value|
-        mapping = mappings.find { |m| m.attribute == key}
+        mapping = map.find { |m| m.attribute == key}
 
         if mapping.nil?
           hash[key] = value
