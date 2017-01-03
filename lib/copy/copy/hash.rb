@@ -9,12 +9,12 @@ class Copy
       keys = hash.keys
       map = []
       keys.each do |key|
-        mapping = mappings.find { |m| m.hash == key}
+        mapping = mappings.find { |m| m.key == key}
 
         if mapping.nil?
           map << key
         else
-          map << { mapping.hash => mapping.object }
+          map << { mapping.key => mapping.attribute }
         end
       end
 
