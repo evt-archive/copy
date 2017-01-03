@@ -20,13 +20,13 @@ class Copy
     end
   end
 
-  def map(object:, hash:)
-    mappings << Mapping.new(object, hash)
+  def map(attribute:, key:)
+    mappings << Mapping.new(attribute, key)
   end
 
-  Mapping = Struct.new(:object, :hash) do
-    def self.build(object:, hash:)
-      new(object, hash)
+  Mapping = Struct.new(:attribute, :key) do
+    def self.build(attribute:, key:)
+      new(attribute, key)
     end
   end
 end

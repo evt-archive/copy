@@ -15,8 +15,8 @@ context "Object to Hash" do
     object.some_other_attribute = mapped_value_2
 
     mappings = []
-    mappings << Copy::Mapping.build(object: :some_attribute, hash: mapped_key_1)
-    mappings << Copy::Mapping.build(object: :some_other_attribute, hash: mapped_key_2)
+    mappings << Copy::Mapping.build(attribute: :some_attribute, key: mapped_key_1)
+    mappings << Copy::Mapping.build(attribute: :some_other_attribute, key: mapped_key_2)
 
     Copy.(object, hash, mappings)
 
