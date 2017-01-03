@@ -17,5 +17,9 @@ class Copy
       mapping = mappings.find { |m| m.key == key }
       mapping &.attribute
     end
+
+    def find(&blk)
+      mappings.find(&blk)
+    end
   end
 end

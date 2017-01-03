@@ -1,27 +1,27 @@
 class Copy
-  def mappings
-    @mappings ||= []
+  def map
+    @map ||= Map.new
   end
-  attr_writer :mappings
+  attr_writer :map
 
   initializer :from, :to
 
-  def self.call(from, to, mappings=nil)
+  def self.call(from, to, map=nil)
     instance = new(from, to)
-    instance.mappings = mappings
+    instance.map = map
     instance.()
   end
 
   def call
     if from.is_a? ::Hash
-      Hash.(from, to, mappings)
+      Hash.(from, to, map)
     else
-      Object.(from, to, mappings)
+      Object.(from, to, map)
     end
   end
 
-  def map(attribute:, key:)
-    mappings << Mapping.new(attribute, key)
+  def add_map(attribute:, key:)
+    map << Mapping.new(attribute, key)
   end
 
   Mapping = Struct.new(:attribute, :key) do
