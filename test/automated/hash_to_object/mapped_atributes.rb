@@ -21,11 +21,6 @@ context "Hash to Object" do
 
     Copy.(hash, object, mappings)
 
-    pp mappings
-
-    pp hash
-    pp object
-
     context "Attributes are copied" do
       test "some_attribute" do
         assert(object.some_attribute == mapped_value_1)
