@@ -7,18 +7,18 @@ class Copy
 
     def self.map(hash, object, map)
       keys = hash.keys
-      map = []
+      copy_map = []
       keys.each do |key|
         mapping = map.find { |m| m.key == key}
 
         if mapping.nil?
-          map << key
+          copy_map << key
         else
-          map << { mapping.key => mapping.attribute }
+          copy_map << { mapping.key => mapping.attribute }
         end
       end
 
-      map
+      copy_map
     end
   end
 end

@@ -15,11 +15,11 @@ context "Hash to Object" do
     mapped_value_2 = SecureRandom.hex
     hash[mapped_key_2] = mapped_value_2
 
-    mappings = []
-    mappings << Copy::Mapping.build(attribute: :some_attribute, key: mapped_key_1)
-    mappings << Copy::Mapping.build(attribute: :some_other_attribute, key: mapped_key_2)
+    map = Copy::Map.new
+    map.add(attribute: :some_attribute, key: mapped_key_1)
+    map.add(attribute: :some_other_attribute, key: mapped_key_2)
 
-    Copy.(hash, object, mappings)
+    Copy.(hash, object, map)
 
     context "Attributes are copied" do
       test "some_attribute" do

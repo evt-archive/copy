@@ -14,11 +14,11 @@ context "Object to Hash" do
     object.some_attribute = mapped_value_1
     object.some_other_attribute = mapped_value_2
 
-    mappings = []
-    mappings << Copy::Mapping.build(attribute: :some_attribute, key: mapped_key_1)
-    mappings << Copy::Mapping.build(attribute: :some_other_attribute, key: mapped_key_2)
+    map = Copy::Map.new
+    map.add(attribute: :some_attribute, key: mapped_key_1)
+    map.add(attribute: :some_other_attribute, key: mapped_key_2)
 
-    Copy.(object, hash, mappings)
+    Copy.(object, hash, map)
 
     context "Attributes are Copied" do
       test "some_attribute" do
