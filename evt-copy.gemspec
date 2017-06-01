@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
   s.name = 'evt-copy'
-  s.version = '0.1.1.2'
+  s.version = '0.1.1.3'
   s.summary = 'Copy between structs and hashes, optionally mapping attribute names in either direction'
   s.description = ' '
 
