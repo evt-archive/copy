@@ -1,4 +1,6 @@
 class Copy
+  Initializer.activate(self)
+
   def map
     @map ||= Map.new
   end

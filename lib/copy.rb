@@ -1,4 +1,4 @@
-require 'initializer'; Initializer.activate
+require 'initializer'
 require 'set_attributes'
 
 require 'copy/copy/map'
