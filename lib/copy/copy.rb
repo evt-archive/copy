@@ -1,5 +1,5 @@
 class Copy
-  Initializer.activate(self)
+  include Initializer
 
   def map
     @map ||= Map.new
